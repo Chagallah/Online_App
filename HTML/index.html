@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Gertrude's Children Hospital</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <h2>Severe Acute Respiratory Illness And Influeza Like Illness Enrolment Questionnaire.</h2>
+
+    <div class="container">
+        <fieldset>
+            <legend>
+                <h2>Screening Questions(Case classification)</h2>
+            </legend>
+            <div class="form-group">
+                <label>Did the patient report a history of fever</label>
+                <select name="" id="" class="form-control">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="99">Don't know</option>
+         </select>
+            </div><br>
+
+            <div class="form-group">
+                <label>The patient has a measured fever ≥38&#8451</label>
+                <select name="" id="" class="form-control">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="99">Don't know</option>
+        </select>
+            </div><br>
+
+
+            <div class="form-group">
+                <label>Is the patient presenting with a cough?</label>
+                <select name="" id="" class="form-control">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+             <option value="99">Don't know</option>
+        </select>
+            </div><br>
+
+            <div class="form-group">
+                <label>Was the onset of symptoms within the last 10 days?</label>
+                <select name="" id="" class="form-control">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="99">Don't know</option>
+        </select>
+            </div><br>
+
+
+            <div class="form-group">
+                <label>Hospitalized</label>
+                <select name="" id="" class="form-control">
+            <option value="1">Yes</option>
+             <option value="2">No</option>
+         </select>
+            </div><br>
+
+
+            <div class="form-group">
+                <label>Date of onset</label>
+                <input type="date" name="" id="" class="form-control">
+            </div><br>
+
+
+            <div class="form-group">
+                <label>Onset days</label>
+                <input type="number" name="" id="" class="form-control" min="0" max="9999">
+            </div>
+
+            <div>&nbsp;</div>
+            <div class="form-group">
+                <button class="btn btn success">Next</button>
+            </div>
+        </fieldset><br>
+
+        <fieldset>
+            <div class="form-group">
+                <label>Interview type:</label>
+                <input type="checkbox" name="form-control" id="form-control"><strong>SARI surveillance</strong>
+                <input type="checkbox" name="form-control" id="form-control"><strong>Outbreak</strong>
+                <input type="checkbox" name="form-control" id="form-control"><strong>ILI surveillance</strong>
+
+            </div>
+
+            <div>&nbsp;</div>
+            <div class="form-group">
+                <button class="btn btn success">Previous</button>
+                <button class="btn btn success">Next</button>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="container">
+        <fieldset>
+            <legend>
+                <h2>Basic details</h2>
+            </legend>
+            <div class="form-group">
+                <label>Patient unique ID number</label>
+                <input type="text" name="" id="">
+            </div><br>
+
+            <div class="form-group">
+                <label>Hospital ID number</label>
+                <input type="text" name="" id="">
+            </div><br>
+
+            <div class="form-group">
+                <label>Interview date</label>
+                <input type="date" name="" id="">
+            </div><br>
+
+            <div>&nbsp;</div>
+            <div class="form-group">
+                <button class="btn btn success">Previous</button>
+                <button class="btn btn success">Next</button>
+            </div>
+
+
+
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend>
+                <h3>PART ONE: Demographic Information</h3>
+            </legend>
+            <p>
+
+                <div class="container">
+                    <form>
+                        <label for="hospital">1. Hospital:</label>
+                        <input type="text" id="hospital" name="hospital" required><br><br>
+
+
+                        <label for="age"> 2.Patient's age in months (for children less than 59 months):</label>
+                        <input type="text" id="months" name="age">
+                        <label for="age"> Age in years:</label>
+                        <input type="text" id="years" name="age"><br><br>
+
+
+                        <label for="sex"> 3.Sex:</label>
+                        <input type="radio" name="sex" value="male">Male
+                        <input type="radio" name="sex" value="female">Female<br><br> 4.where do you live?
+                        <label for="county">County</label>
+                        <input type="text" id="county" name="county" required>
+                        <label for="village">Village/Estate</label>
+                        <input type="text" id="village" name="village" required>
+
+                    </form>
+            </p>
+            <div>&nbsp;</div>
+            <div class="form-group">
+                <button class="btn btn success">Previous</button>
+                <button class="btn btn success">Next</button>
+            </div>
+
+            </div>
+        </fieldset>
+
+        <fieldset>
+
+            <div class="container">
+
+                <h3>PART TWO: Clinical Description</h3>
+                <h6>5. Date of onset of the current Illness</h6>
+                <input type="text" name="date_of_onset" size="8" />
+                <h6>6. Date of hospital admission (for SARI cases):</h6>
+                <input type="text" name="date_of_hospital_admission" size="8" />
+                <h6>7. Date seen in out-patient (for ILI cases):</h6>
+                <input type="text" name="date_seen_in_out_patient" size="8" />
+                <h6>8. Has the patient had the following symptoms or signs with this illness?</h6>
+
+                <ul>
+                    <li><input type="checkbox" name="symptoms[]" value="wheezing"> Wheezing</li>
+                    <li><input type="checkbox" name="symptoms[]" value="sore_throat"> Sore throat</li>
+                    <li><input type="checkbox" name="symptoms[]" value="difficulty_in_breathing"> Difficulty in breathing</li>
+                    <li><input type="checkbox" name="symptoms[]" value="rhinitis"> Rhinorrhea</li>
+                    <li><input type="checkbox" name="symptoms[]" value="chest_pain"> Chest pain</li>
+                    <li><input type="checkbox" name="symptoms[]" value="diarrhea"> Diarrhea</li>
+                    <li><input type="checkbox" name="symptoms[]" value="vomiting"> Vomiting</li>
+                    <li><input type="checkbox" name="symptoms[]" value="muscles_aches"> Muscles aches</li>
+                    <li><input type="checkbox" name="symptoms[]" value="chills"> Chills</li>
+                    <li><input type="checkbox" name="symptoms[]" value="lack_of_appetite"> Lack of appetite/refusal to feed</li>
+                    <li><input type="checkbox" name="symptoms[]" value="convulsions"> Convulsions</li>
+                </ul>
+                <div>&nbsp;</div>
+                <div class="form-group">
+                    <button class="btn btn success">Previous</button>
+                    <button class="btn btn success">Next</button>
+                </div>
+                </form>
+            </div>
+        </fieldset>
+</body>
+
+<body>
+    <div class="container">
+
+        <h3>PART THREE: Risk Factors</h3>
+        <h5>10. Does the patient have any of the medical conditions listed below as diagnosed by a clinician? [Check all that apply]</h5>
+        <ul>
+            <li><input type="checkbox" name="chronic_respiratory_disease" value="Yes"> Chronic respiratory disease (not including asthma and TB)</li>
+            <li><input type="checkbox" name="chronic_neurological_or_neuromuscular_disease" value="Yes"> Chronic neurological or neuromuscular disease</li>
+            <li><input type="checkbox" name="newly_diagnosed_tb" value="Yes"> Newly diagnosed TB</li>
+            <li><input type="checkbox" name="prior_tb" value="Yes"> Prior TB</li>
+            <li><input type="checkbox" name="hiv_aids" value="Yes"> HIV/AIDS</li>
+            <li><input type="checkbox" name="chronic_cardiac_heart_disease" value="Yes"> Chronic cardiac/heart disease</li>
+            <li><input type="checkbox" name="malnutrition" value="Yes"> Malnutrition</li>
+            <li><input type="checkbox" name="chronic_liver_disease" value="Yes"> Chronic liver disease</li>
+            <li><input type="checkbox" name="chronic_renal_disease" value="Yes"> Chronic renal disease</li>
+            <li><input type="checkbox" name="diabetes" value="Yes"> Diabetes</li>
+            <li><input type="checkbox" name="asthma" value="Yes"> Asthma</li>
+            <li><input type="checkbox" name="cancer" value="Yes"> Cancer (currently or in the past 12 months)</li>
+            <li><input type="checkbox" name="sickle_cell_disease" value="Yes"> Sickle cell disease</li>
+            <li><input type="checkbox" name="rickets" value="Yes"> Rickets</li>
+        </ul>
+
+        <input type="submit" value="Submit">
+    </div>
+
+    <fieldset>
+        <legend>
+            <h3>PART FOUR: Physical examination</h3>
+        </legend>
+        <div class="container">
+            <div class="form-group">
+                <h6>11. Temperature:&#8451</h6>
+                <input type="text" name="temperature" size="8" />
+                <ul>
+                    <li><input type="radio" name="temperature_type" value="oral"> Oral</li>
+                    <li><input type="radio" name="temperature_type" value="auxiliary"> Auxiliary</li>
+                    <li><input type="radio" name="temperature_type" value="forehead"> Forehead thermometer gun</li>
+                </ul>
+
+                <h6>12. Respiratory rate: breaths per minute (count for full minute)</h6>
+                <input type="text" name="respiratory_rate" size="8" />
+
+                <h6>13. Oxygen saturation: % </h6>
+                <input type="text" name="oxygen_saturation" size="8" />
+                <ul>
+                    <li><input type="radio" name="oxygen_saturation_type" value="room_air"> Room air</li>
+                    <li><input type="radio" name="oxygen_saturation_type" value="on_supplemental_oxygen"> On supplemental oxygen</li>
+                </ul>
+
+            </div>
+            <div>&nbsp;</div>
+            <div class="form-group">
+                <button class="btn btn success">Previous</button>
+                <button class="btn btn success">Next</button>
+            </div>
+        </div>
+
+    </fieldset>
+
+
+
+
+    <fieldset>
+        <h3>PART FIVE: Disease severity (SARI cases only)</h3>
+        <div class="container">
+
+            <h6>14. Has the patient:</h6>
+            <ul>
+                <li><input type="checkbox" name="has_been_admitted_to_icu" value="yes"> Been admitted to ICU/HDU</li>
+                <li><input type="checkbox" name="has_received_mechanical_ventilation" value="yes"> Received mechanical ventilation</li>
+            </ul>
+            <input type="submit" value="Submit"><br><br>
+        </div>
+
+    </fieldset>
+
+    <fieldset>
+
+        <div class="container">
+            <h3>PART SIX:Vaccinations</h3>
+
+            <h6>15. Has the patient received any of the following vaccinations? (Ask to see vaccination card)</h6>
+
+            <ul>
+                <li><input type="checkbox" name="has_received_vaccination" value="influenza" onclick="showVaccinationInfo('influenza')"> Influenza vaccine in the past 12 months? (Applicable to all ages) <input type="radio" name="influenza_verified" value="yes">                    Yes <input type="radio" name="influenza_verified" value="no"> No</li>
+                <li><input type="checkbox" name="has_received_vaccination" value="covid-19" onclick="showVaccinationInfo('covid-19')"> COVID-19 vaccine? <input type="radio" name="covid-19_verified" value="yes"> Yes <input type="radio" name="covid-19_verified"
+                        value="no"> No
+                </li>
+            </ul>
+
+        </div>
+
+        <div id="influenza-vaccine-info" style="display: none;">
+            <h3>Influenza vaccine</h3>
+            <ul>
+                <li>How many doses? <input type="text" name="influenza_doses"></li>
+                <li>Was this verified using a vaccination card or hospital records? <input type="radio" name="influenza_verified_with" value="vaccination_card"> Vaccination card <input type="radio" name="influenza_verified_with" value="hospital_records">                    Hospital records</li>
+            </ul>
+        </div>
+
+        <div id="covid-19-vaccine-info" style="display: none;">
+            <h3>COVID-19 vaccine</h3>
+            <ul>
+                <li>How many doses? <input type="text" name="covid-19_doses"></li>
+                <li>Was this verified using a vaccination card or hospital records? <input type="radio" name="covid-19_verified_with" value="vaccination_card"> Vaccination card <input type="radio" name="covid-19_verified_with" value="hospital_records"> Hospital
+                    records
+                </li>
+                <li>Since the patient's vaccination has, she/he been tested for COVID-19? <input type="radio" name="covid-19_tested" value="yes"> Yes <input type="radio" name="covid-19_tested" value="no"> No</li>
+                <li>If yes, what was the COVID-19 test result? <input type="text" name="covid-19_test_result"></li>
+            </ul>
+
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h3>PART SEVEN: Specimen collection</h3>
+            <div class="container">
+        </legend>
+        <div class="form-group">
+            <p>16. Was any specimen collected from this patient for influenza testing?
+
+                <input type="radio" name="influenza_testing" value="yes"> Yes
+                <input type="radio" name="influenza_testing" value="no"> No
+            </p>
+
+            <p>a. Type of swab specimen collected?
+
+                <input type="checkbox" name="swab_type" value="nasal"> Nasal swab
+                <input type="checkbox" name="swab_type" value="np"> NP
+                <input type="checkbox" name="swab_type" value="op"> OP
+                <input type="checkbox" name="swab_type" value="np/op"> NP/OP</p>
+
+            <p>b. Date of specimen collection:
+
+                <input type="date" name="specimen_collection_date"></p>
+            <div>&nbsp;</div>
+            <div class="form-group">
+                <button class="btn btn success">Previous</button>
+                <button class="btn btn success">Next</button>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h3>PART EIGHT: Final Outcome</h3>
+        </legend>
+        <div class="form-group">
+            <p><label>17. What was the final outcome?</label></p>
+            <input type="radio" name="outcome" value="outcome">Discharge from hospital(alive)<br>
+            <input type="radio" name="outcome" value="outcome">Death<br>
+            <input type="radio" name="outcome" value="outcome">Refused hospital treatment<br>
+            <input type="radio" name="outcome" value="outcome">Absconded<br>
+            <input type="checkbox" name="outcome" value="outcome">Referred to another facility: <label><i><strong>Specify name of the facility</strong></i></label>
+            <input type="text" name="facility" id="facility">
+
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <p>18. Date of final outcome?
+            <input type="date" name="final_outcome" id="final_outcome">
+        </p>
+
+
+        <div>
+            <div>&nbsp;</div>
+            <div class="content">
+                <button class="btn btn success">Previous Page</button>
+                <button style="text-align:right" class="btn btn info">Save</button>
+            </div>
+            <br>
+
+            <input type="button" onclick="diseaseSeverity()" value="Submit">
+        </div>
+
+    </fieldset>
+
+</body>
+
+</html>
