@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <title> GETRUDE CHILDREN HOSPITAL</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text] {
+            width: 100%;
+        }
+        
+        .dark-mode {
+            background-color: rgb(18, 61, 102);
+            color: #8d8a8a91;
+        }
+        
+        body {
+            background-attachment: fixed;
+            background-color: rgb(155, 155, 155)
+        }
+        
+        input {
+            padding: 10px;
+            width: 100%;
+            font-size: 17px;
+            font-family: Raleway;
+            border: 1px solid #aaaaaa;
+        }
+        
+        #regForm {
+            background-color: #f0ece794;
+            color: black;
+            margin: 100px auto;
+            font-family: Raleway;
+            padding: 40px;
+            width: 70%;
+            min-width: 300px;
+        }
+        
+        h1 {
+            text-align: center;
+            font: optional;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        /* Mark input boxes that gets an error on validation: */
+        
+        input.invalid {
+            background-color: #ffdddd;
+        }
+        /* Hide all steps by default: */
+        
+        .tab {
+            display: none;
+        }
+        
+        button {
+            background-color: #04AA6D;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 17px;
+            font-family: Raleway;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            opacity: 0.8;
+        }
+        
+        #prevBtn {
+            background-color: #0a4908;
+        }
+        /* Make circles that indicate the steps of the form: */
+        
+        .step {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbbbbb;
+            border: none;
+            border-radius: 50%;
+            display: inline-block;
+            opacity: 0.5;
+        }
+        
+        .step.active {
+            opacity: 1;
+        }
+        /* Mark the steps that are finished and valid: */
+        
+        .step.finish {
+            background-color: #049faaf8;
+        }
+        
+        p1 {
+            font-size: medium;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .mode {
+            background-color: rgba(0, 0, 0, 0.815);
+            shape-margin: 0cqb;
+            text-align: right;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <nav>
+
+    </nav>
+    <button class="mode" onclick="myFunction1()"> mode</button>
+    <form id="regForm" action="">
+        <h1>Severe Acute Respiratory Illness And Influeza Like Illness Enrolment Questionnaire</h1>
+
+        <div class="tab">
+            <p1>Screening Questions(Case classification)</p1><br><br>
+            <label>Did the patient report a history of fever</label>
+            <select name="" id="" class="form-control">
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+                <option value="99">Don't know</option>
+            </select>
+            <br><br>
+
+            <label>The patient has a measured fever ≥38&#8451</label>
+            <select name="" id="" class="form-control">
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+                <option value="99">Don't know</option>
+            </select>
+            <br><br>
+
+            <label>Is the patient presenting with a cough?</label>
+            <select name="" id="" class="form-control">
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+                <option value="99">Don't know</option>
+            </select>
+
+            <br><br>
+
+            <label>Was the onset of symptoms within the last 10 days?</label>
+            <select name="" id="" class="form-control">
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+                <option value="99">Don't know</option>
+            </select>
+
+            <br><br>
+
+            <label>Hospitalized</label>
+            <select name="" id="" class="form-control">
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+            </select>
+
+            <br><br>
+            <label>Date of onset</label>
+            <input type="date" name="" id="" class="form-control">
+
+            <br><br>
+            <label>Interview type:</label>
+            <input type="checkbox" name="" id="form-control">SARI surveillance
+            <input type="checkbox" name="" id="form-control">Outbreak
+            <input type="checkbox" name="" id="form-control">ILI surveillance
+
+        </div>
+
+        <br>
+        <div class="tab">
+            <p1>Basic details</p1><br>
+
+            <label>Patient unique ID number</label>
+            <input type="text" name="" id="" class="form-control">
+            <br> <br>
+            <label>Hospital ID number</label>
+            <input type="text" name="" id="" class="form-control">
+            <br> <br>
+
+            <label>Interview date</label>
+            <input type="date" name="" id="" class="form-control">
+
+            <br> <br>
+
+
+        </div>
+
+
+        <div class="tab">
+            <h2 style="text-align:center">PART ONE</h2>
+
+            <h3> Demographic Information</h3>
+
+            <label for="hospital">1. Hospital:</label>
+            <input type="text" id="hospital" name="hospital" required><br><br>
+
+
+            <label for="age"> 2.Patient's age in months (for children less than 59 months):</label>
+            <input type="text" id="months" name="age">
+            <label for="age"> Age in years:</label>
+            <input type="text" id="years" name="age"><br><br>
+
+
+            <label for="sex"> 3.Sex:</label>
+            <div>
+                <input type="radio" class="radio-inline" name="sex" value="male">Male
+                <input type="radio" class="radio-inline" name="sex" value="female">Female<br><br>
+            </div>
+
+            4.where do you live?
+            <label for="county">County</label>
+            <input type="text" id="county" name="county" required>
+            <label for="village">Village/Estate</label>
+            <input type="text" id="village" name="village" required>
+        </div><br><br>
+
+        <div class="tab">
+            <h2 style="text-align:center">PART TWO:</h2>
+
+
+            <label for="onset-date">5. Date of onset of current illnes:</label>
+            <input type="date" id="onset-date" name="onset-date" required><br><br>
+
+            <label for="admission-date">6.Date of hospital Admission( for SARI cases):</label>
+            <input type="date" id="admission-date" name="admission-date" required><br><br>
+
+            <label for="outpatient-date">7. Date seen in out-patient(for ILI cases):</label>
+            <input type="date" id="outpatient-date" name="outpatient-date" required><br><br> 8.Has the patient had the following symptom or signs with this illness? <br>
+
+            <label for="wheezing">a. Wheezing:</label>
+            <input type="radio" name="wheezing" value="yes">Yes
+            <input type="radio" name="wheezing" value="no">No<br><br>
+
+            </li><label for="sore-throat">b. Sore throat:</label>
+            <input type="radio" name="sore-throat" value="yes">Yes
+            <input type="radio" name="sore-throat" value="no">No<br><br>
+
+            <label for="difficulty-in-breathing">c. Difficulty in breathing:</label>
+            <input type="radio" name="difficulty-in-breathing" value="yes">Yes
+            <input type="radio" name="difficulty-in-breathing" value="no">No<br><br>
+
+            <label for="rhinorrhea">d. Rhinorrhea:</label>
+            <input type="radio" name="rhinorrhea" value="yes">Yes
+            <input type="radio" name="rhinorrhea" value="no">No<br><br>
+
+            <label for="chest-pain">e. Chest pain:</label>
+            <input type="radio" name="chest-pain" value="yes">Yes
+            <input type="radio" name="chest-pain" value="no">No<br><br>
+
+            <label for="diarrhea">f. Diarrhea:</label>
+            <input type="radio" name="diarrhea" value="yes">Yes
+            <input type="radio" name="diarrhea" value="no">No<br><br>
+
+            <label for="vomiting">g. Vomiting:</label>
+            <input type="radio" name="vomiting" value="yes">Yes
+            <input type="radio" name="vomiting" value="no">No<br><br>
+
+            <label for="muscles-aches">h. Muscles aches:</label>
+            <input type="radio" name="muscles-aches" value="yes">Yes
+            <input type="radio" name="muscles-aches" value="no">No<br><br>
+
+
+
+            <label for="chills"> i.Chills:</label>
+            <input type="radio" name="chills" value="yes">Yes
+            <input type="radio" name="chills" value="no">No<br><br>
+
+
+            <label for="appetite">j. Lack of appetite/refusal to feed:</label>
+            <input type="radio" name="appetite" value="yes">Yes
+            <input type="radio" name="appetite" value="no">No<br><br>
+
+            <label for="convulsions">k. Convulsions:</label>
+            <input type="radio" name="convulsions" value="yes">Yes
+            <input type="radio" name="convulsions" value="no">No<br><br>
+
+        </div>
+
+        <div class="tab">
+
+            <i><strong>9.Complete the follwing for children <5 years: </strong> </i><br><br>
+            <label for="feeding">a. Unable to drink or breastfeed at all:</label>
+            <input type="radio" name="feeding" value="yes">Yes
+            <input type="radio" name="feeding" value="no">No<br><br>
+
+            <label for="vomits">b. Vomits everything:</label>
+            <input type="radio" name="vomits" value="yes">Yes
+            <input type="radio" name="vomits" value="no">No<br><br>
+
+            <label for="stridor">c. Stridor:</label>
+            <input type="radio" name="stridor" value="yes">Yes
+            <input type="radio" name="stridor" value="no">No<br><br>
+
+            <label for="Grunting">d. Grunting:</label>
+            <input type="radio" name="Grunting" value="yes">Yes
+            <input type="radio" name="Grunting" value="no">No<br><br>
+
+            <label for="Nasal-flaring">e. Nasal flaring:</label>
+            <input type="radio" name="Nasal-flaring" value="yes">Yes
+            <input type="radio" name="Nasal-flaring" value="no">No<br><br>
+
+            <label for="Chest-in-dwrawing">f. Chest in-dwrawing (reaction under ribcage on inspiration):</label>
+            <input type="radio" name="Chest-in-dwrawing" value="yes">Yes
+            <input type="radio" name="Chest-in-dwrawing" value="no">No<br><br>
+
+            <label for="Lethargic">g. Lethargic:</label>
+            <input type="radio" name="Lethargic" value="yes">Yes
+            <input type="radio" name="Lethargic" value="no">No<br><br>
+
+            <label for="Unconscious">h. Unconscious(comatos, not awake):</label>
+            <input type="radio" name="Unconscious" value="yes">Yes
+            <input type="radio" name="Unconscious" value="no">No<br><br>
+
+
+        </div>
+
+        <div class="tab">
+            <h2 style="text-align:center">PART THREE: <br>Risk Factors</h2>
+
+            <label for="patient">10. Does the patient have any of the medical conditions listed below as diagnosed by a cllinician?</label>
+            <label><strong>(Check all that apply)</strong></label>
+
+            <p>
+                <label>a. Chronic respiratory disease (not including asthma and TB)</label>
+                <input type="radio" name="chronicRespiratory" id="chronicRespiratory">Yes
+                <input type="radio" name="chronicRespiratory" id="chronicRespiratory">No
+                <input type="radio" name="chronicRespiratory" id="chronicRespiratory">Don't know
+            </p>
+
+            <p>
+                <label>b. Chronic neurological or neuromuscular disease</label>
+                <input type="radio" name="chronicNeurological" id="chronicNeurological">Yes
+                <input type="radio" name="chronicNeurological" id="chronicNeurological">No
+                <input type="radio" name="chronicNeurological" id="chronicNeurological">Don't know
+            </p>
+
+            <p>
+                <label>c. Newly diagnosed TB</label>
+                <input type="radio" name="newlyDiagnosed" id="newlyDiagnosed">Yes
+                <input type="radio" name="newlyDiagnosed" id="newlyDiagnosed">No
+                <input type="radio" name="newlyDiagnosed" id="newlyDiagnosed">Don't know
+            </p>
+
+            <p>
+                <label>d. Prior TB</label>
+                <input type="radio" name="tb" id="tb">Yes
+                <input type="radio" name="tb" id="tb">No
+                <input type="radio" name="tb" id="tb">Don't know
+            </p>
+
+            <p>
+                <label>e. HIV/AIDS</label>
+                <input type="radio" name="hivAids" id="hivAids">Yes
+                <input type="radio" name="hivAids" id="hivAids">No
+                <input type="radio" name="hivAids" id="hivAids">Don't know
+            </p>
+
+            <p>
+                <label>f. Chronic cardiac/heart disease</label>
+                <input type="radio" name="chronicCardiac" id="chronicCardiac">Yes
+                <input type="radio" name="chronicCardiac" id="chronicCardiac">No
+                <input type="radio" name="chronicCardiac" id="chronicCardiac">Don't know
+            </p>
+
+            <p>
+                <label>h. Chronic liver disease</label>
+                <input type="radio" name="chronicLiver" id="chronicLiver">Yes
+                <input type="radio" name="chronicLiver" id="chronicLiver">No
+                <input type="radio" name="chronicLiver" id="chronicLiver">Don't know
+            </p>
+
+            <p>
+                <label>i. Chronic renal disease</label>
+                <input type="radio" name="chronicRenal" id="chronicRenal">Yes
+                <input type="radio" name="chronicRenal" id="chronicRenal">No
+                <input type="radio" name="chronicRenal" id="chronicRenal">Don't know
+            </p>
+
+            <p>
+                <label>j. Diabetes</label>
+                <input type="radio" name="diabetes" id="diabetes">Yes
+                <input type="radio" name="diabetes" id="diabetes">No
+                <input type="radio" name="diabetes" id="diabetes">Don't know
+            </p>
+
+            <p>
+                <label>k. Asthma</label>
+                <input type="radio" name="asthma" id="asthma">Yes
+                <input type="radio" name="asthma" id="asthma">No
+                <input type="radio" name="asthma" id="asthma">Don't know
+            </p>
+
+            <p>
+                <label>l. Cancer (currently or in the past 12 months)</label>
+                <input type="radio" name="cancer" id="cancer">Yes
+                <input type="radio" name="cancer" id="cancer">No
+                <input type="radio" name="cancer" id="cancer">Don't know
+            </p>
+
+            <p>
+                <label>m. Sickle cell disease</label>
+                <input type="radio" name="sickleCell" id="sickleCell">Yes
+                <input type="radio" name="sickleCell" id="sickleCell">No
+                <input type="radio" name="sickleCell" id="sickleCell">Don't know
+            </p>
+
+            <p>
+                <label>n. Rickets</label>
+                <input type="radio" name="rickets" id="rickets">Yes
+                <input type="radio" name="rickets" id="rickets">No
+                <input type="radio" name="rickets" id="rickets">Don't knok
+            </p>
+
+        </div>
+
+        <div class="tab">
+
+            <h2 style="text-align:center">PART FOUR: Physical examination</h2>
+            <label>11. Temperature :</label>
+            <input type="text"> &#8451.
+            <input type="radio" name="temperature" id="temperature">Oral
+            <input type="radio" name="temperature" id="temperature">Auxiliary
+            </p>
+
+            <p>
+                <label>12. Respiratory rate:</label>
+                <input type="text" name="rate" id="rate"> breaths per minute<strong><i>(count for full minute)</i></strong>
+            </p>
+
+            <p>
+                <label>13. Oxygen saturation:</label>
+                <input type="text" name="oxygen" id="oxygen"> %
+                <input type="radio" name="oxygen" id="oxygen">Room air
+                <input type="radio" name="oxygen" id="oxygen">On supplemental oxygen
+            </p>
+        </div>
+
+        <div class="tab">
+            <h2 style="text-align:center">PART FIVE: Disease severity (SARI cases only)</h2>
+
+            <p><strong>14. Has the patient:</strong></p>
+
+            <p>a. Been admitted to ICU/HDU?
+                <input type="radio" id="hasBeenAdmittedToICU" name="hasBeenAdmittedToICU">Yes
+                <input type="radio" id="hasBeenAdmittedToICU" name="hasBeenAdmittedToICU">No
+            </p>
+
+
+            <p>b. Received mechanical ventilation?
+                <input type="radio" id="hasReceivedMechanicalVentilation" name="hasReceivedMechanicalVentilation">
+                <label for="hasReceivedMechanicalVentilation">Yes</label>
+                <input type="radio" id="hasReceivedMechanicalVentilation" name="hasReceivedMechanicalVentilation">
+                <label for="hasReceivedMechanicalVentilation">No</label>
+            </p>
+
+        </div>
+
+        <div class="tab">
+            <h2 style="text-align:center">PART SIX: Vaccination </h2>
+
+            <p>15. Has the patient received any of the following vaccinations? (Ask to see vaccination card)</p>
+
+
+
+            <p>a. Influenza vaccine in the first twelve months?
+                <input type="radio" name="covid19Verified" value="Yes" onclick="showVaccinationAnswer('covid19Verified', 'Yes')"> Yes
+                <input type="radio" name="covid19Verified" value="No" onclick="showVaccinationAnswer('covid19Verified', 'No')"> No
+            </p>
+
+
+
+            <p>b. Covid 19 Vaccine?
+                <input type="radio" name="covid19Verified" value="Yes" onclick="showVaccinationAnswer('covid19Verified', 'Yes')"> Yes
+                <input type="radio" name="covid19Verified" value="No" onclick="showVaccinationAnswer('covid19Verified', 'No')"> No
+            </p>
+
+
+
+            <p>i. If yes, how many doses of COVID-19 vaccine?
+                <input type="number" id="covid19Doses" min="0" max="3">
+            </p>
+
+            <p>ii. Was this verified using a vaccination card or hospital records?
+                <input type="radio" name="covid19Verified" value="Yes" onclick="showVaccinationAnswer('covid19Verified', 'Yes')"> Yes
+                <input type="radio" name="covid19Verified" value="No" onclick="showVaccinationAnswer('covid19Verified', 'No')"> No
+            </p>
+
+
+
+            <p>iii. Since the patient's vaccination has she/he been tested for COVID-19?
+                <input type="radio" name="covid19Tested" value="Yes" onclick="showVaccinationAnswer('covid19Tested', 'Yes')"> Yes
+                <input type="radio" name="covid19Tested" value="No" onclick="showVaccinationAnswer('covid19Tested', 'No')"> No
+            </p>
+
+            <p>iv. If yes, what was the COVID-19 test result?
+                <input type="radio" name="covid19TestResult" value="Positive" onclick="showVaccinationAnswer('covid19TestResult', 'Positive')"> Positive
+                <input type="radio" name="covid19TestResult" value="Negative" onclick="showVaccinationAnswer('covid19TestResult', 'Negative')"> Negative
+            </p>
+
+        </div>
+
+        <div class="tab">
+
+
+            <h2 style="text-align:center">PART SEVEN: Specimen collection</h2>
+
+
+            <p>16. Was any specimen collected from this patient for influenza testing?
+
+                <input type="radio" name="influenza_testing" value="yes"> Yes
+                <input type="radio" name="influenza_testing" value="no"> No
+            </p>
+
+            <p>a. Type of swab specimen collected?
+
+                <input type="checkbox" name="swab_type" value="nasal"> Nasal swab
+                <input type="checkbox" name="swab_type" value="np"> NP
+                <input type="checkbox" name="swab_type" value="op"> OP
+                <input type="checkbox" name="swab_type" value="np/op"> NP/OP</p>
+
+            <p>b. Date of specimen collection:
+
+                <input type="date" name="specimen_collection_date"></p>
+        </div>
+
+        <div class="tab">
+
+            <h2 style="text-align:center">PART EIGHT: Final Outcome</h2>
+
+            <p><label>17. What was the final outcome?</label></p>
+            <input type="radio" name="outcome" value="outcome">Discharge from hospital(alive)<br>
+            <input type="radio" name="outcome" value="outcome">Death<br>
+            <input type="radio" name="outcome" value="outcome">Refused hospital treatment<br>
+            <input type="radio" name="outcome" value="outcome">Absconded<br>
+            <input type="checkbox" name="outcome" value="outcome">Referred to another facility: <label><i><strong>Specify name of the facility</strong></i></label>
+            <input type="text" name="facility" id="facility">
+
+
+            <p>18. Date of final outcome?
+                <input type="date" name="final_outcome" id="final_outcome">
+            </p>
+
+        </div>
+
+
+
+
+
+
+
+        <div style="overflow:auto">
+            <div style="float:right;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            </div>
+        </div>
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+
+
+
+
+
+
+
+
+    </form>
+
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+            }
+
+
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form...
+            if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("regForm").submit();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            // A loop that checks every input field in the current tab:
+            for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                    // add an "invalid" class to the field:
+                    y[i].className += " invalid";
+                    // and set the current valid status to false
+                    valid = false;
+                }
+            }
+            // If the valid status is true, mark the step as finished and valid:
+            if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return valid; // return the valid status
+        }
+
+        function myFunction1() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+
+</html>
