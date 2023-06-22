@@ -8,50 +8,156 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
     <title> GETRUDE CHILDREN HOSPITAL</title>
-    <link rel="stylesheet" href="/Form/css/style.css">
 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text] {
+            width: 100%;
+        }
+        
+        
+        
+        body {
+            background-attachment: fixed;
+            background-color: rgb(155, 155, 155)
+            
+        }
+        
+        input {
+            padding: 10px;
+            width: 100%;
+            font-size: 17px;
+            font-family: Raleway;
+            border: 1px solid #aaaaaa;
+        }
+        
+        #regForm {
+            background-color: #f0ece794;
+            color: black;
+            margin: 100px auto;
+            font-family: Raleway;
+            padding: 40px;
+            width: 70%;
+            height: auto;
+            
+        }
+        
+        h1 {
+            text-align: center;
+            font: optional;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        /* Mark input boxes that gets an error on validation: */
+        
+        input.invalid {
+            background-color: #ffdddd;
+        }
+        /* Hide all steps by default: */
+        
+        .tab {
+            display: none;
+        }
+        
+        button {
+            background-color: #04AA6D;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 17px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            cursor: pointer;
+        }
+        
+        button:hover {
+    
+            opacity: 0.8;
+        }
+        
+        #prevBtn {
+            
+            background-color: #0a4908;
+        }
+        /* Make circles that indicate the steps of the form: */
+        
+        .step {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbbbbb;
+            border: none;
+            border-radius: 50%;
+            display:inline-flex;
+            opacity: 0.5;
+        }
+        
+        .step.active {
+            opacity: 1;
+        }
+        /* Mark the steps that are finished and valid: */
+        
+        .step.finish {
+            background-color: #049faaf8;
+        }
+        
+        p1 {
+            font-size: medium;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .mode {
+            background-color: green;
+            shape-margin: 0cqb;
+            text-align: right;
+        }
 
+ /* Light Theme Styles */
+ .light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark Theme Styles */
+.dark-mode {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+    </style>
 </head>
 
+<body class="light-theme">
 
-
-<body>
-    <nav>
-
-    </nav>
-    <button class="mode" onclick="myFunction1()"> mode</button>
-    <form id="regForm" action="">
-        <h1>Severe Acute Respiratory Illness And Influeza Like Illness Enrolment Questionnaire</h1>
-
+    
+    <button onclick="myFunction1()" class="mode">MODE</button>
+<h1>Severe Acute Respiratory Illness And Influeza Like Illness Enrolment Questionnaire</h1> 
+    <form class="light-theme"id="regForm" action="" method="">
         <div class="tab">
             <p1>Screening Questions(Case classification)</p1><br><br>
-            <label>Did the patient report a history of fever</label>
-            <select name="" id="" class="form-control">
+            <label for= "answer1" >Did the patient report a history of fever</label>
+            <select name="" id="answer1" class="form-control" onchange="autoSelectCheckboxes()">
+                <option value="">select option</option>
                 <option value="1">Yes</option>
                 <option value="2">No</option>
                 <option value="99">Don't know</option>
             </select>
             <br><br>
 
-            <label>The patient has a measured fever ≥38&#8451</label>
-            <select name="" id="" class="form-control">
+            <label for="answer2">The patient has a measured fever ≥38&#8451</label>
+            <select name="" id="answer2" class="form-control" onchange="autoSelectCheckboxes()">
+                <option value="">select option</option>
                 <option value="1">Yes</option>
                 <option value="2">No</option>
                 <option value="99">Don't know</option>
             </select>
             <br><br>
 
-            <label>Is the patient presenting with a cough?</label>
-            <select name="" id="" class="form-control">
-                <option value="1">Yes</option>
-                <option value="2">No</option>
-                <option value="99">Don't know</option>
-            </select>
-
-            <br><br>
-
-            <label>Was the onset of symptoms within the last 10 days?</label>
-            <select name="" id="" class="form-control">
+            <label for="answer3">Is the patient presenting with a cough?</label>
+            <select name="" id="answer3"class="form-control" onchange="autoSelectCheckboxes()" >
+                <option value="">select option</option>
                 <option value="1">Yes</option>
                 <option value="2">No</option>
                 <option value="99">Don't know</option>
@@ -59,21 +165,43 @@
 
             <br><br>
 
-            <label>Hospitalized</label>
-            <select name="" id="" class="form-control">
+            <label for="answer4">Was the onset of symptoms within the last 10 days?</label>
+            <select name="" id="answer4" class="form-control" onchange="autoSelectCheckboxes()">
+                <option value="">select option</option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+                <option value="99">Don't know</option>
+            </select>
+
+            <br><br>
+
+            <label for="answer5">Hospitalized</label>
+            <select name="" id="answer5" class="form-control"  onchange="autoSelectCheckboxes()">
+                <option value="">select option</option>
                 <option value="1">Yes</option>
                 <option value="2">No</option>
             </select>
 
             <br><br>
-            <label>Date of onset</label>
-            <input type="date" name="" id="" class="form-control">
+            <label>Date of onset</label><br>
+           
+            <br> <input type="date" name="" id="datetime" class="auto-fill-today">
 
             <br><br>
             <label>Interview type:</label>
-            <input type="checkbox" name="" id="form-control">SARI surveillance
-            <input type="checkbox" name="" id="form-control">Outbreak
-            <input type="checkbox" name="" id="form-control">ILI surveillance
+            <div class="checkbox">
+            <label><input type="checkbox" name="nextQuestionOptions" id="checkbox1">SARI surveillance</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="nextQuestionOptions" id="checkbox2">Outbreak</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="nextQuestionOptions" id="checkbox3">ILI surveillance</label>
+              </div>
+
+
+
+
 
         </div>
 
@@ -82,15 +210,15 @@
             <p1>Basic details</p1><br>
 
             <label>Patient unique ID number</label>
-            <input type="text" name="" id="" class="form-control">
+            <input type="text" name="" id="" class="form-control" oninput="restrictInput(event)">
             <br> <br>
             <label>Hospital ID number</label>
-            <input type="text" name="" id="" class="form-control">
+            <input type="text" name="" id="" class="form-control" >
             <br> <br>
 
             <label>Interview date</label>
-            <input type="date" name="" id="" class="form-control">
-
+            <input type="date" name="" id="datetime" class="auto-fill-today">
+           
             <br> <br>
 
 
@@ -103,93 +231,149 @@
             <h3> Demographic Information</h3>
 
             <label for="hospital">1. Hospital:</label>
-            <input type="text" id="hospital" name="hospital" required><br><br>
+            <input type="text" id="hospital" name="hospital"  oninput="preventNumbers(event)" required><br><br>
 
 
             <label for="age"> 2.Patient's age in months (for children less than 59 months):</label>
-            <input type="text" id="months" name="age">
+            <input type="text" id="age" name="age" oninput="restrictInput(event)" onblur="appendSymbols()">
             <label for="age"> Age in years:</label>
-            <input type="text" id="years" name="age"><br><br>
+            <input type="text" id="years" name="years" oninput="restrictInput(event)" onblur="appendSymbols()"><br><br>
 
 
             <label for="sex"> 3.Sex:</label>
-            <div>
-                <input type="radio" class="radio-inline" name="sex" value="male">Male
-                <input type="radio" class="radio-inline" name="sex" value="female">Female<br><br>
-            </div>
+                     <div class="radio">
+               <label> <input type="radio"  name="sex" value="male">Male </label>
+              </div>
+              <div class="radio">
+                <label><input type="radio"  name="sex" value="female">Female<br><br>
+                </label>
+                </div>
 
             4.where do you live?
             <label for="county">County</label>
-            <input type="text" id="county" name="county" required>
+            <input type="text" id="county" name="county" required oninput="preventNumbers(event)">
             <label for="village">Village/Estate</label>
-            <input type="text" id="village" name="village" required>
+            <input type="text" id="village" name="village"  oninput="preventNumbers(event)" required>
         </div><br><br>
 
         <div class="tab">
             <h2 style="text-align:center">PART TWO:</h2>
 
 
-            <label for="onset-date">5. Date of onset of current illnes:</label>
-            <input type="date" id="onset-date" name="onset-date" required><br><br>
+            <label for="datetime">5. Date of onset of current illnes:</label>
+            <input type="date" id="datetime" name="onset-date"  class="auto-fill-today" required><br><br>
 
-            <label for="admission-date">6.Date of hospital Admission( for SARI cases):</label>
-            <input type="date" id="admission-date" name="admission-date" required><br><br>
+            <label for="datetime">6.Date of hospital Admission( for SARI cases):</label>
+            <input type="date" id="datetime" name="admission-date" class="auto-fill-today" required><br><br>
 
             <label for="outpatient-date">7. Date seen in out-patient(for ILI cases):</label>
-            <input type="date" id="outpatient-date" name="outpatient-date" required><br><br> 8.Has the patient had the following symptom or signs with this illness? <br>
+            <input type="date" id="datetime" name="outpatient-date" required class="auto-fill-today"><br><br> 
+            
+            8.Has the patient had the following symptom or signs with this illness? <br>
 
             <label for="wheezing">a. Wheezing:</label>
-            <input type="radio" name="wheezing" value="yes">Yes
-            <input type="radio" name="wheezing" value="no">No<br><br>
+            <div class="radio">
+            <label><input type="radio" name="wheezing" value="yes">Yes </label>
+           
+            </div>
+              <div class="radio">
+            <label><input type="radio" name="wheezing" value="no">No</label>
+              
+              </div>
 
-            </li><label for="sore-throat">b. Sore throat:</label>
-            <input type="radio" name="sore-throat" value="yes">Yes
-            <input type="radio" name="sore-throat" value="no">No<br><br>
-
-            <label for="difficulty-in-breathing">c. Difficulty in breathing:</label>
-            <input type="radio" name="difficulty-in-breathing" value="yes">Yes
-            <input type="radio" name="difficulty-in-breathing" value="no">No<br><br>
+              
+            <label for="sore-throat">b. Sore throat:</label>
+            <div class="radio">
+            <label><input type="radio" name="sore-throat" value="yes">Yes</label>
+            </div>
+            <div class="radio">
+            <label><input type="radio" name="sore-throat" value="no">No
+            </label>
+            </div>
+        
+            
+            
+            
+                <label for="difficulty-in-breathing">c. Difficulty in breathing:</label>
+              <div class="radio">
+                <label><input type="radio" name="difficulty-in-breathing" value="yes">Yes</label>
+            </div>
+              <div class="radio">
+                <label><input type="radio" name="difficulty-in-breathing" value="no">No</label>
+                </div>
 
             <label for="rhinorrhea">d. Rhinorrhea:</label>
-            <input type="radio" name="rhinorrhea" value="yes">Yes
-            <input type="radio" name="rhinorrhea" value="no">No<br><br>
-
+            <div class="radio">
+            <label><input type="radio" name="rhinorrhea" value="yes">Yes</label>
+            </div>
+            <div class="radio">
+            <label><input type="radio" name="rhinorrhea" value="no">No</label>
+              </div>
+              
             <label for="chest-pain">e. Chest pain:</label>
-            <input type="radio" name="chest-pain" value="yes">Yes
-            <input type="radio" name="chest-pain" value="no">No<br><br>
+           <div class="radio">
+           <label> <input type="radio" name="chest-pain" value="yes">Yes</label>
+           </div>
+           <div class="radio">
+            <label><input type="radio" name="chest-pain" value="no">No</label>
+            </div>
 
             <label for="diarrhea">f. Diarrhea:</label>
-            <input type="radio" name="diarrhea" value="yes">Yes
-            <input type="radio" name="diarrhea" value="no">No<br><br>
+            <div class="radio">
+            <label><input type="radio" name="diarrhea" value="yes">Yes</label>
+            </div>
+            <div class="radio">
+            <label><input type="radio" name="diarrhea" value="no">No</label>
+            </div>
 
+            
             <label for="vomiting">g. Vomiting:</label>
-            <input type="radio" name="vomiting" value="yes">Yes
-            <input type="radio" name="vomiting" value="no">No<br><br>
+            <div class="radio">
+            <label><input type="radio" name="vomiting" value="yes">Yes</label>
+            </div>
+            <div class="radio">
+            <label><input type="radio" name="vomiting" value="no">No</label>
+            </div>
 
             <label for="muscles-aches">h. Muscles aches:</label>
-            <input type="radio" name="muscles-aches" value="yes">Yes
-            <input type="radio" name="muscles-aches" value="no">No<br><br>
+            <div class="radio">
+            <label><input type="radio" name="muscles-aches" value="yes">Yes</label>
+            </div>
+            <div class="radio">
+            <label><input type="radio" name="muscles-aches" value="no">No</label>
+            </div>
 
 
 
             <label for="chills"> i.Chills:</label>
-            <input type="radio" name="chills" value="yes">Yes
-            <input type="radio" name="chills" value="no">No<br><br>
+            <div class="radio">
+            <label><input type="radio" name="chills" value="yes">Yes</label>
+            </div>
+            <div class="radio">
+            <label><input type="radio" name="chills" value="no">No<label>
+            </div>
 
 
             <label for="appetite">j. Lack of appetite/refusal to feed:</label>
-            <input type="radio" name="appetite" value="yes">Yes
-            <input type="radio" name="appetite" value="no">No<br><br>
+            <div class="radio">
+            <label><input type="radio" name="appetite" value="yes">Yes</label>
+            </div>
+            <div class="radio">
+            <label><input type="radio" name="appetite" value="no">No</label>
+            </div>
 
             <label for="convulsions">k. Convulsions:</label>
-            <input type="radio" name="convulsions" value="yes">Yes
-            <input type="radio" name="convulsions" value="no">No<br><br>
-
+            <div class="radio">
+            <label><input type="radio" name="convulsions" value="yes">Yes</label>
+           </div>
+            <div class="radio">
+            <label><input type="radio" name="convulsions" value="no">No</label>
+            </div>
         </div>
 
         <div class="tab">
 
-            <i><strong>9.Complete the follwing for children <5 years: </strong> </i><br><br>
+            <strong><i></i>9.Complete the follwing for children <5 years:</i> </strong> <br><br>
             <label for="feeding">a. Unable to drink or breastfeed at all:</label>
             <input type="radio" name="feeding" value="yes">Yes
             <input type="radio" name="feeding" value="no">No<br><br>
@@ -327,20 +511,20 @@
         <div class="tab">
 
             <h2 style="text-align:center">PART FOUR: Physical examination</h2>
-            <label>11. Temperature :</label>
-            <input type="text"> &#8451.
+            <label>11. Temperature:   &#8451.</label>
+            <input type="text" oninput="restrictInput(event)" onblur="appendSymbols()">
             <input type="radio" name="temperature" id="temperature">Oral
             <input type="radio" name="temperature" id="temperature">Auxiliary
             </p>
 
             <p>
-                <label>12. Respiratory rate:</label>
-                <input type="text" name="rate" id="rate"> breaths per minute<strong><i>(count for full minute)</i></strong>
+                <label>12. Respiratory rate: ( breaths per minute<strong><i>(count for full minute)</i></strong>)</label>
+                <input type="text" name="rate" id="mins" oninput="restrictInput(event)" onblur="appendSymbols()">
             </p>
 
             <p>
-                <label>13. Oxygen saturation:</label>
-                <input type="text" name="oxygen" id="oxygen"> %
+                <label>13. Oxygen saturation %:</label>
+                <input type="text" name="oxygen" id="oxygen" oninput="restrictInput(event)" onblur="appendSymbols()"> 
                 <input type="radio" name="oxygen" id="oxygen">Room air
                 <input type="radio" name="oxygen" id="oxygen">On supplemental oxygen
             </p>
@@ -431,7 +615,7 @@
 
             <p>b. Date of specimen collection:
 
-                <input type="date" name="specimen_collection_date"></p>
+                <input type="date" id="datetime"name="specimen_collection_date" class="auto-fill-today"></p>
         </div>
 
         <div class="tab">
@@ -439,16 +623,29 @@
             <h2 style="text-align:center">PART EIGHT: Final Outcome</h2>
 
             <p><label>17. What was the final outcome?</label></p>
-            <input type="radio" name="outcome" value="outcome">Discharge from hospital(alive)<br>
-            <input type="radio" name="outcome" value="outcome">Death<br>
-            <input type="radio" name="outcome" value="outcome">Refused hospital treatment<br>
-            <input type="radio" name="outcome" value="outcome">Absconded<br>
-            <input type="checkbox" name="outcome" value="outcome">Referred to another facility: <label><i><strong>Specify name of the facility</strong></i></label>
-            <input type="text" name="facility" id="facility">
+            <div class="radio">
+            <input type="radio" name="outcome" value="outcome">
+           </div>
+           <label>Discharge from hospital(alive)</label>
+           <div class="radio">
+            <label><input type="radio" name="outcome" value="outcome">Death</label>
+            </div>
+            <div class="radio">
+            <label><input type="radio" name="outcome" value="outcome">Refused hospital treatment</label>
+            </div>
+            <div class="radio">
+            <label><input type="radio" name="outcome" value="outcome">Absconded</label>
+            </div>
+            <div class="checkbox">
+            <label><input type="checkbox" name="outcome" value="outcome">
+            </div>
+                <label>Referred to another facility:</label> <label><i><strong>Specify name of the facility</strong></i></label>
+            
+            <input type="text" name="facility" id="facility" oninput="preventNumbers(event)">
 
 
             <p>18. Date of final outcome?
-                <input type="date" name="final_outcome" id="final_outcome">
+                <input type="date" name="final_outcome" id="datetime" class="auto-fill-today">
             </p>
 
         </div>
@@ -460,7 +657,7 @@
 
 
         <div style="overflow:auto">
-            <div style="float:right;">
+            <div style="float:center">
                 <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                 <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
             </div>
@@ -489,7 +686,198 @@
 
     </form>
 
-    <script src="/Form/js/script.js"></script>
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+            }
+
+
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form...
+            if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("regForm").submit();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+
+
+
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+//DARK-MODE TOGGLE
+        function myFunction1() {
+            var form = document.getElementById("regForm");
+            var element = document.body;
+
+            form.classList.toggle("dark-mode");
+            element.classList.toggle("dark-mode");
+        }
+
+        // preventing entering numbers for names
+            function preventNumbers(event) {
+                var input = event.target;
+                var value = input.value;
+                var newValue = value.replace(/[0-9]/g, ''); // Remove numeric characters
+    
+                if (newValue !== value) {
+                    input.value = newValue;
+                }
+            }
+        
+//updating dates 
+        window.onload = function() {
+            var dateFields = document.querySelectorAll('input[type="date"].auto-fill-today');
+            var today = new Date();
+            var formattedDate = today.toISOString().slice(0, 10);
+
+            dateFields.forEach(function(field) {
+                field.value = formattedDate;
+                field.max = formattedDate;
+                field.min = formattedDate;
+            });
+        };
+ 
+
+        function restrictInput(event) {
+            var input = event.target;
+            var value = input.value;
+            var newValue = value.replace(/\D/g, ''); // Remove non-numeric characters
+
+            if (newValue !== value) {
+                input.value = newValue;
+            }
+        }
+
+    
+        function autoSelectCheckboxes() {
+            var answer1 = document.getElementById('answer1').value;
+            var answer2 = document.getElementById('answer2').value;
+            var answer3 = document.getElementById('answer3').value;
+            var answer4 = document.getElementById('answer4').value;
+            var answer5 = document.getElementById('answer5').value;
+
+            // Clear previous selections
+            document.getElementById('checkbox1').checked = false;
+            document.getElementById('checkbox2').checked = false;
+            document.getElementById('checkbox3').checked = false;
+
+            // Auto-select checkboxes based on previous answers
+            if ((answer1 === '1' || answer2 === '1') && answer3 === '1' && answer4 === '1' && answer5 === '1') {
+                document.getElementById('checkbox1').checked = true;
+            } else if  ((answer1 === '1' || answer2 === '1') && answer3 === '1' && answer4 === '1' && answer5 === '2') {
+                document.getElementById('checkbox3').checked = true;
+            }else if (answer1 === '1' && answer2 === '1' && answer3 === '1' && answer4 === '1' && answer5 === '1'){
+                document.getElementById('checkbox2').checked = true;
+            }
+
+
+        }
+
+        //AUTO APPEND SYMBOLS
+          
+        function appendSymbols() {
+            //var rateInput = document.getElementById('');
+            var temperatureInput = document.getElementById('temperature');
+            var ageInput = document.getElementById('age');
+            var yearsInput = document.getElementById('years');
+           
+
+            //appendPercentageSymbol(rateInput);
+            //appendDegreeSymbol(temperatureInput);
+            appendMonthsSymbol(ageInput);
+            appendYearSymbol(yearsInput);
+            // You can add more functions for other input fields here
+        }
+/*
+        function appendPercentageSymbol(inputField) {
+            var value = inputField.value.trim();
+            if (value !== '') {
+                if (!value.endsWith('%')) {
+                    inputField.value = value + '%';
+                }
+            }
+        }
+*/
+        function appendDegreeSymbol(inputField) {
+            var value = inputField.value.trim();
+            if (value !== '') {
+                if (!value.endsWith('°C')) {
+                    inputField.value = value + '°C';
+                }
+            }
+        }
+
+        function appendMonthsSymbol(inputField) {
+            var value = inputField.value.trim();
+            if (value !== '') {
+                if (!value.endsWith(' months old')) {
+                    inputField.value = value + ' months old';
+                }
+            }
+        }
+
+        function appendYearSymbol(inputField) {
+            var value = inputField.value.trim();
+            if (value !== '') {
+                if (!value.endsWith(' years old')) {
+                    inputField.value = value + ' years old';
+                }
+            }
+        }
+
+        
+    
+
+    </script> 
+
 </body>
 
 </html>

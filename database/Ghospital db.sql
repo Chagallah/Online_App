@@ -1,7 +1,7 @@
 drop database GHospital;
 
 
-/*create database GHospital;
+create database GHospital;
 use database GHospital
 Go
 CREATE TABLE Screening (

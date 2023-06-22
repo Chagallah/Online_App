@@ -1,5 +1,5 @@
 	// Get the form element
-	const form = document.querySelector("form");
+	const m = document.querySelector("form");
 
 	// Add an event listener to the submit button
 	form.addEventListener("submit", (event) => {
@@ -9,7 +9,7 @@
 
 	    // Check if all the fields are filled in
 	    if (form.querySelector("select[name='history_of_fever']").value === "" ||
-	        form.querySelector("select[name='body_temperature']").value === "" ||
+	       form.querySelector("select[name='body_temperature']").value === "" ||
 	        form.querySelector("select[name='coughing']").value === "" ||
 	        form.querySelector("select[name='onset_of_symptoms']").value === "" ||
 	        form.querySelector("select[name='hospitalized']").value === "" ||
@@ -31,7 +31,7 @@
 
 
 	// Get the form element
-	const form = document.querySelector("form");
+	 m = document.querySelector("form");
 
 	// Add an event listener to the submit button
 	form.addEventListener("submit", (event) => {
@@ -613,7 +613,6 @@
 
 	    return isValid;
 	}
-
 	var currentTab = 0; // Current tab is set to be the first tab (0)
 	showTab(currentTab); // Display the current tab
 
